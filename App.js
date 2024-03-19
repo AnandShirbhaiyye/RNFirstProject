@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Button, Text, View, StyleSheet} from 'react-native';
+import ExStyles from './style.js';
 
 function App() {
   const [name, setName] = useState('Anand');
@@ -16,6 +17,10 @@ function App() {
       <Text style={styles.textBox}>Hello {name}</Text>
       <Text style={styles.textBox}>Hello {data}</Text>
       <Text style={styles.textBox}>hey Im Anand...Full Stack developer</Text>
+      <Text style={ExStyles.textBox}>External Styles in React native</Text>
+      <Text style={[ExStyles.textBox, ExStyles.textBox, {marginTop: 30}]}>
+        External Styles in React native 2
+      </Text>
       <Button title="On Press" onPress={userName} color={'red'}></Button>
     </View>
   );
